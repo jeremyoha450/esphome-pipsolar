@@ -134,6 +134,11 @@ void Pipsolar::loop() {
         if (this->input_voltage_range_switch_) {
           this->input_voltage_range_switch_->publish_state(value_input_voltage_range_ == 1);
         }
+        // special for input voltage range select
+        if (this->input_voltage_range_select_) {
+          std::string value = esphome::to_string(value_input_voltage_range_);
+          this->input_voltage_range_select_->map_and_publish(value);
+        }
         if (this->output_source_priority_) {
           this->output_source_priority_->publish_state(value_output_source_priority_);
         }
