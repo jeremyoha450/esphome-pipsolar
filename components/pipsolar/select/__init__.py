@@ -11,6 +11,7 @@ CODEOWNERS = ["@andreashergert1984"]
 CONF_OPTIONSMAP = "optionsmap"
 CONF_STATUSMAP = "statusmap"
 
+CONF_INPUT_VOLTAGE_RANGE = "input_voltage_range"
 CONF_OUTPUT_SOURCE_PRIORITY = "output_source_priority"
 CONF_CHARGER_SOURCE_PRIORITY = "charger_source_priority"
 CONF_CHARGING_DISCHARGING_CONTROL = "charging_discharging_control"
@@ -77,6 +78,7 @@ def ensure_option_map():
 # )
 
 TYPES = {
+    CONF_INPUT_VOLTAGE_RANGE: ("PGR00",None),
     CONF_OUTPUT_SOURCE_PRIORITY: ("POP00", None),
     CONF_CHARGER_SOURCE_PRIORITY: ("PCP03", None),
     CONF_CHARGING_DISCHARGING_CONTROL: ("PBATCD111", None),
